@@ -1,0 +1,20 @@
+@use './utils/mixin' as *;
+@use './utils/reset';
+@use './layouts/Navbar';
+@use './layouts/Topbar';
+@use './layouts/Content';
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+
+#root, .wrap, .content-section{
+    height:100%;
+}
+
+body{
+    background: #F3F6FC;
+    font-family:'Noto Sans KR','Apple SD Gothic Neo',Sans-serif;
+}
+
+.content-section{
+    width:100%;
+    padding-left: rem(240);
+}

@@ -1,0 +1,11 @@
+
+$base: 16;
+$color-just-black: #191919;
+$color-darkgray: #3E3E3E;
+$color-gray: #5F5F5F;
+$color-just-gray: #969696;
+$color-blue: #399EFA;
+
+@function rem($px){
+    @return calc($px / $base) * 1rem;
+}

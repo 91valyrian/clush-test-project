@@ -1,0 +1,32 @@
+@use '../utils/mixin' as *;
+
+
+.btn{
+    height:rem(46);
+    border-radius:rem(10);
+    border:1px solid #E7E7E7;
+    background: #fff;
+
+    &.btn-reset{
+        width:rem(46);
+    }
+    &.btn-primary{
+        width:rem(120);
+        font-size: rem(14);
+        font-weight: 500;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #E7E7E7;
+        color:#fff;
+        background-color: $color-blue;
+
+        &.small{
+            height:rem(34);
+        }
+        &.noneSize{
+            width:auto;
+            padding:0 rem(14);
+            -webkit-text-stroke-width: 0;
+            -webkit-text-stroke-color: #E7E7E7;
+        }
+    }
+}

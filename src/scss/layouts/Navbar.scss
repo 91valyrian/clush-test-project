@@ -1,0 +1,71 @@
+@use '../utils/mixin' as *;
+
+.sidebar-nav{
+    position: absolute;
+    left:0;
+    top:0;
+    width: rem(240);
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+
+    .logo{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding:rem(12) 0;
+        img{
+            max-width: rem(162);
+        }
+    }
+
+    .navbar{
+        padding: rem(10);
+        li{
+            .menu-title{
+                display:flex;
+                align-items: center;
+                gap:rem(6);
+                padding: rem(13) rem(20);
+                border-radius: rem(10);
+                font-weight: 600;
+                cursor: pointer;
+                color: $color-just-black;
+            }
+            &.on{
+                .menu-title{
+                    color:#fff;
+                    background-color: $color-blue;
+                    img{
+                        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(9deg) brightness(101%) contrast(102%);
+                    }
+                }
+                .submenu{
+                    width:auto;
+                    height: auto;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .submenu{
+            width:0;
+            height:0;
+            visibility: hidden;
+            li{
+                a{
+                    display:block;
+                    padding: rem(6) 0 rem(7) rem(50);
+                    color: $color-darkgray;
+                    font-size:rem(12);
+                    line-height: rem(17);
+                    font-weight: 500;
+                    &.active{
+                        color:$color-blue;
+                    }
+                }
+
+            }
+        }
+    }
+}

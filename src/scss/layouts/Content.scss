@@ -1,0 +1,16 @@
+@use '../utils/mixin' as *;
+@use '../content/PageHader';
+@use '../content/SearchFilter';
+@use '../content/Board';
+
+.main-article{
+    padding: rem(30) rem(40);
+    height: calc(100% - 80px);
+}
+
+.content{
+    background: #fff;
+    height:100%;
+    padding: rem(30);
+    border-radius: rem(20);
+}

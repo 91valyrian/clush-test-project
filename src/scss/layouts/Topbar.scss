@@ -1,0 +1,90 @@
+@use '../utils/mixin' as *;
+
+.util-wrap {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: rem(80);
+    padding-right: rem(40);
+    background: #fff;
+
+    .util-list {
+        display: flex;
+        gap: rem(20);
+        margin-right: rem(30);
+        align-items: center;
+
+        li {
+            position: relative;
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+
+            &.lang {
+                &.on{
+                    img{
+                        filter: invert(53%) sepia(70%) saturate(2029%) hue-rotate(185deg) brightness(97%) contrast(101%);
+                    }
+                    span{
+                        color:$color-blue;
+                    }
+                    .ico{
+                        transform: scaleY(-1);
+                        filter: invert(53%) sepia(70%) saturate(2029%) hue-rotate(185deg) brightness(97%) contrast(101%);
+                    }
+
+                    .lang-list{
+                        visibility: visible;
+                        width:100%;
+                        height:auto;
+                    }
+                }
+                a {
+                    gap: rem(4);
+
+                    span {
+                        color: $color-gray;
+                        
+                    }
+                    .ico{
+                        width:rem(16);
+                        height:rem(16);
+                        background: url('../../img/util/ico-drop.svg') no-repeat center right;
+                        background-size: rem(16);
+                        padding-right: rem(18);
+                    }
+                }
+            }
+        }
+    }
+
+    .lang-list {
+        visibility: hidden;
+        position: absolute;
+        top: calc(100% + rem(10));
+        width: 0;
+        height:0;
+        background: #fff;
+        border-radius: rem(10);
+        box-shadow: rem(2) rem(2) rem(5) rem(1) rgba(0, 0, 0, .1);
+
+        a {
+            display: block;
+            padding: rem(10);
+            color: $color-darkgray
+        }
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        font-size: rem(13);
+        line-height: 150%;
+
+        .bold {
+            font-weight: 600;
+        }
+    }
+}

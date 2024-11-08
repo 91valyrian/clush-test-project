@@ -1,0 +1,40 @@
+@use '../utils/mixin' as *;
+
+.pageHeader{
+    display:flex;
+    flex-direction: column;
+    gap:rem(20);
+}
+
+.page-head{
+    display:flex;
+    flex-direction: column;
+    gap:rem(10);
+    h2{
+        font-weight: 800;
+        font-size: rem(22);
+        color:$color-just-black;
+    }
+}
+.current-path{
+    display:flex;
+    align-items: center;
+    gap: rem(6);
+    span{
+        display:inline-flex;
+        align-items: center;
+        color:$color-just-gray;
+        font-size: rem(13);
+        gap:rem(6);
+        &::after{
+            display: block;
+            content:'';
+            background: url('../../img/util/ico-chevron.svg') no-repeat center center;
+            width:rem(10);
+            height:rem(10);
+        }
+        &:last-child::after{
+            display:none;
+        }
+    }
+}
